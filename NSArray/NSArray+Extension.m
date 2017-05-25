@@ -10,7 +10,7 @@
 
 @implementation NSArray (Extension)
 + (NSArray *)sameElementsBetweenArrayA:(NSArray *)arrayA arrayB:(NSArray *)arrayB {
-    if (!arrayA || !arrayB || !(arrayA.count != 0) || !(arrayB.count != 0)) {
+    if (!(arrayA && arrayB)) {
         NSLog(@"error!!\nfunction:%s\nline:%d",__FUNCTION__,__LINE__);
         return nil;
     }
